@@ -1,0 +1,96 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+body{
+
+    display: flex;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.calculator{
+    padding: 10px;
+    border-radius: 1em;
+    height: 400px;
+    width: 300px;
+    margin: auto;
+    background-color: #191b28;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+
+#output{
+    width: 95%;
+    height: 22%;
+    grid-column: 1/-1;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 10px;
+    word-wrap: break-word;
+    word-break: break-all   ;   
+    border-bottom: orangered solid 1px; 
+    
+}
+#output #previous-operand {
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 1.5rem;
+}
+
+#output #current-operand {
+    color: white;
+    font-size: 2.5rem;
+}
+
+.buttons{
+    height: 75%;
+}
+
+button{
+    width: 55px;
+    height: 55px;
+    margin: 0px 6px; 
+    border-radius: 50%;
+    border: solid #191b28 0.5px;
+    background-color: #191b28;
+    font-size: large;
+    color: white;
+
+}
+
+div.row5 > button{
+    width: 60px;
+    height: 60px;
+    margin-right:0px;
+}
+#equal{
+    border-radius: 50%;
+    width: 67px;
+    height: 67px;
+    background-color: orangered;
+
+}
+
+#equal:hover{
+
+    background-color: white;
+    color: orangered;
+}
+
+.operator{
+    color: orangered;
+}
+
+
+button:hover{
+    background-color: rgba(75, 75, 75, 0.4);
+}
+
+.operator:hover{
+    background-color: rgba(255, 255, 255);
+}

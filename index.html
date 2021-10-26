@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculator</title>
+    <link rel="stylesheet" href="./style.css" >
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="./script.js"></script>
+</head>
+<body onload="setScreen('current-operand','0')">
+
+    <div class="calculator">
+
+        <div id="output">
+            <div id="previous-operand" data-previous-operand></div>
+            <div id="current-operand"data-current-operand></div>
+        </div>
+
+        <div class="buttons">
+            <div class="row1">
+                <button class="operator" onclick="setScreen('current-operand','0');setScreen('previous-operand','')" data-all-clear > <h3>AC</h3> </button>
+                <button class="material-icons operator"  onclick="backSpace()"> <h6>&#xe14a;</h6></button>
+                <button class="operator"  onclick="setOperator('%')"><h3>%</h3></button>
+                <button class="operator" onclick="setOperator('/')" ><h3>&divide;</h3></button>
+            </div>
+            <div class="row2">
+                <button onclick="setValue(this)" > 7</button>
+                <button  onclick="setValue(this)">8</button>
+                <button  onclick="setValue(this)">9</button>
+                <button  class="operator"  onclick="setOperator('*')" ><h3> &times; </h3></button>
+            </div>
+            <div class="row3">
+                <button onclick="setValue(this)"> 4</button>
+                <button  onclick="setValue(this)">5</button>
+                <button  onclick="setValue(this)">6</button>
+                <button class="operator"  onclick="setOperator('-')" ><h3>-</h3></button>
+            </div>
+            <div class="row4">
+                <button  onclick="setValue(this)">1</button>
+                <button  onclick="setValue(this)">2</button>
+                <button onclick="setValue(this)">3</button>
+                <button class="operator" onclick="setOperator('+')" ><h3>+</h3></button>
+            </div>
+            <div class="row5">
+                <button  onclick="setValue(this)">00</button> 
+                <button  onclick="setValue(this)">0</button>
+                <button  onclick="setValue(this)">.</button>
+                <button  id="equal"  onclick="displayResult()"> <h2>=</h2> </button>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
